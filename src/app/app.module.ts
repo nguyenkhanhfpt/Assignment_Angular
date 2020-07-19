@@ -11,6 +11,7 @@ import { CoursesComponent } from './pages/courses/courses.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BoxCourseComponent } from './components/box-course/box-course.component';
+import { TestComponent } from './pages/test/test.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BoxCourseComponent } from './components/box-course/box-course.component
     CoursesComponent,
     MenuComponent,
     FooterComponent,
-    BoxCourseComponent
+    BoxCourseComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

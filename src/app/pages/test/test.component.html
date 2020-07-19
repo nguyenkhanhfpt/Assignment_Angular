@@ -1,0 +1,25 @@
+<h6>{{questions[questionIndex].Text}}</h6>
+
+<div *ngFor="let question of questions[questionIndex].Answers">
+    <input type="radio" id="{{question.Id}}" name="{{questions[questionIndex].Id}}" value="{{question.Id}}">
+    <label for="{{question.Id}}">{{question.Text}}</label>
+</div>
+
+<button (click)="previousQuestion()" 
+    class="btn btn-danger" 
+    [disabled]="questionIndex == 0">
+    Previous
+</button>
+<button (click)="nextQuestion()"
+    class="btn btn-primary ml-2" 
+    *ngIf="questionIndex < questions.length - 1">
+    Next
+</button>
+
+<button
+    *ngIf="questionIndex == questions.length - 1"
+    class="btn btn-primary ml-2" >
+    Finish
+</button>
+
+
