@@ -1,30 +1,35 @@
-<header>
-</header>
+<div class="wraper">
 
-<div class="contai">
-    <h2 class="title">Bài test</h2>
+    <header>
+    </header>
 
-    <div class="filter-course">
-        <div class="d-flex">
-            <h4 class="filter-item" 
-                [ngClass]="filterCourse == 1 ? 'active' : ''"  
-                (click)="changeFilter(1)"
-            > 
-                Đề cử
-            </h4>
-            <h4 class="filter-item" 
-                [ngClass]="filterCourse == 2 ? 'active' : ''" 
-                (click)="changeFilter(2)"
-            >
-                Chưa hoàn thành
-            </h4>
-            <h4 class="filter-item" 
-                [ngClass]="filterCourse == 3 ? 'active' : ''"
-                (click)="changeFilter(3)"
-            >
-                Đã hoàn thành
-            </h4>
+    <div class="contai">
+        <h2 class="title">Bài test</h2>
+
+        <div class="filter-course">
+            <div class="d-flex">
+                <h4 class="filter-item" [ngClass]="filterCourse == 1 ? 'active' : ''" (click)="changeFilter(1)">
+                    Đề cử
+                </h4>
+                <h4 class="filter-item" [ngClass]="filterCourse == 2 ? 'active' : ''" (click)="changeFilter(2)">
+                    Chưa hoàn thành
+                </h4>
+                <h4 class="filter-item" [ngClass]="filterCourse == 3 ? 'active' : ''" (click)="changeFilter(3)">
+                    Đã hoàn thành (1)
+                </h4>
+            </div>
+            <a routerLink="/coures" routerLinkActive="active" class="text-dark">Xem tất cả</a>
         </div>
-        <a routerLink="/coures" routerLinkActive="active" class="text-dark">Xem tất cả</a>
+
+        <div class="course pb-5">
+            <div *ngFor="let course of courses">
+                <app-box-course [course]="course"></app-box-course>
+            </div>
+        </div>
+
+
+
     </div>
+
+
 </div>
