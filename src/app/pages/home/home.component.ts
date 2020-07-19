@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   filterCourse:number;
-  constructor() {
+  courses:any = [];
+
+  constructor(private httpClient: HttpClient) {
     this.filterCourse = 1;
   }
 
@@ -16,6 +19,10 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.httpClient.get("assets/db/Subjects.js").subscribe(data =>{
+      this.courses = data;
+      this.courses = this.courses.slice(0, 4);
+    })
   }
 
 }

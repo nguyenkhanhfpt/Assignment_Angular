@@ -9,6 +9,7 @@ header {
 .filter-course {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1.5rem;
 
     .filter-item {
         font-size: 1.15rem;
@@ -21,7 +22,7 @@ header {
             content: "";
             display: block;
             margin-top: .2rem;
-            width: 0;
+            width: 0px;
             height: 3px;
             background-color: #f46521;
             border-radius: 5px;

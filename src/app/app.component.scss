@@ -1,8 +1,10 @@
 $text-color: #3b3c54;
+$primary-background: #f7f9fa;
 $background: #283054;
 $backgroundPoly: #f7941d;
 $title-color: #f46521;
 $contai: 1400px;
+$wraper: 1920px;
 
 
 
@@ -26,6 +28,13 @@ img {
     max-width: 100%;
 }
 
+.wraper {
+    max-width: $wraper;
+    margin: 0 auto;
+
+    background-color: $primary-background;
+}
+
 .contai {
     max-width: $contai;
     margin: 0 auto;
@@ -41,4 +50,76 @@ img {
 
     margin-bottom: 1.1rem;
     color: $title-color;
+}
+
+
+.course {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+
+    &__box {
+        box-shadow: 0 2px 10px rgba(196, 196, 196, 0.51);
+        transition: all 300ms;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(188,188,188,.8);
+        }
+
+        .card-img-top {
+            height: 220px;
+        }
+
+        .card-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        .card-text {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+
+            text-align: justify;
+        }
+
+        hr {
+            margin: 0;
+        }
+
+        &-footer {
+            display: flex;
+            justify-content: space-between;
+
+            padding-top: .9rem;
+            padding-bottom: .9rem;
+        }
+    }
+}
+
+
+.primary-btn {
+    outline: none;
+    border: 1.5px solid $title-color;
+    border-radius: 5px;
+    padding: .3rem 1rem;
+
+    background-color: #fff;
+    color: $title-color;
+    
+    font-weight: 500;
+    font-size: 1.1rem;
+
+    transition: linear .2s;
+
+    &:hover {
+        background-color: $title-color;
+        color: #fff;
+    }
 }
