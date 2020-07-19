@@ -1,0 +1,29 @@
+@import '../../app.component.scss';
+
+.box-menu {
+    height: 70px;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: .92rem 1rem;
+    width: 100%;
+
+    background-color: #fff;
+
+    z-index: 20;
+
+    
+
+    .nav-link {
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
+        color: $text-color;
+
+        font-family: 'Roboto', sans-serif;
+        
+    }
+}

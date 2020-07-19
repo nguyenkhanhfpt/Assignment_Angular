@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  filterCourse:number;
+  constructor() {
+    this.filterCourse = 1;
+  }
 
-  constructor() { }
+  changeFilter(num) {
+    this.filterCourse = num;
+  }
 
   ngOnInit(): void {
   }

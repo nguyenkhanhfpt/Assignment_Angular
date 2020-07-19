@@ -1,0 +1,44 @@
+$text-color: #3b3c54;
+$background: #283054;
+$backgroundPoly: #f7941d;
+$title-color: #f46521;
+$contai: 1400px;
+
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.contai {
+    max-width: $contai;
+    margin: 0 auto;
+    padding-left: .7rem;
+    padding-right: .7rem;
+}
+
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.65rem;
+
+    margin-bottom: 1.1rem;
+    color: $title-color;
+}

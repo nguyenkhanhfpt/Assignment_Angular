@@ -1,0 +1,47 @@
+@import '../../app.component.scss';
+
+header {
+    height: 300px;
+    background-color: $background;
+    margin-bottom: 1.5rem;
+}
+
+.filter-course {
+    display: flex;
+    justify-content: space-between;
+
+    .filter-item {
+        font-size: 1.15rem;
+        margin-right: 2rem;
+
+        cursor: pointer;
+        transition: linear .2s;
+
+        &:after {
+            content: "";
+            display: block;
+            margin-top: .2rem;
+            width: 0;
+            height: 3px;
+            background-color: #f46521;
+            border-radius: 5px;
+            transition: all 300ms;
+        }
+
+        &:hover {
+            color: $title-color;
+        }
+
+        &:hover:after{
+            width: 50%;
+        }
+    }
+
+    .filter-item.active {
+        color: $title-color !important;
+
+        &:after {
+            width: 50%;
+        }
+    }
+}
