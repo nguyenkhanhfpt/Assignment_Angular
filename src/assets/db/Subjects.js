@@ -2,12 +2,12 @@
     {
         "Id": "ADAV",
         "Name": "Lập trình Android nâng cao",
-        "Logo": "android.png"
+        "Logo": "android2.png"
     },
     {
         "Id": "ADBS",
         "Name": "Lập trình Android cơ bản",
-        "Logo": "android2.png"
+        "Logo": "android.png"
     },
     {
         "Id": "ADTE",
@@ -22,12 +22,12 @@
     {
         "Id": "ASNE",
         "Name": "Lập trình ASP.NET",
-        "Logo": "ASNE.png"
+        "Logo": "asp.jpg"
     },
     {
         "Id": "CLCO",
         "Name": "Điện toán đám mây",
-        "Logo": "CLCO.jpg"
+        "Logo": "dtdm.png"
     },
     {
         "Id": "DBAV",
@@ -42,61 +42,61 @@
     {
         "Id": "GAME",
         "Name": "Lập trình game 2D",
-        "Logo": "GAME.png"
+        "Logo": "game2d.jpg"
     },
     {
         "Id": "HTCS",
         "Name": "HTML5 và CSS3",
-        "Logo": "HTCS.jpg"
+        "Logo": "html5-css3.png"
     },
     {
         "Id": "INMA",
         "Name": "Internet Marketing",
-        "Logo": "INMA.jpg"
+        "Logo": "marketing.jpg"
     },
     {
         "Id": "JAAV",
         "Name": "Lập trình Java nâng cao",
-        "Logo": "JAAV.png"
+        "Logo": "java.jpg"
     },
     {
         "Id": "JABS",
         "Name": "Lập trình hướng đối tượng với Java",
-        "Logo": "JABS.png"
+        "Logo": "java.jpg"
     },
     {
         "Id": "JSPR",
         "Name": "Lập trình JavaScript",
-        "Logo": "JSPR.png"
+        "Logo": "js.png"
     },
     {
         "Id": "LAYO",
         "Name": "Thiết kế layout",
-        "Logo": "LAYO.jpg"
+        "Logo": "design.jpg"
     },
     {
         "Id": "MOWE",
         "Name": "Thiết kế web cho điện thoại di động",
-        "Logo": "MOWE.png"
+        "Logo": "mobile.jpg"
     },
     {
         "Id": "PHPP",
         "Name": "Lập trình PHP",
-        "Logo": "PHPP.png"
+        "Logo": "php.png"
     },
     {
         "Id": "PMAG",
         "Name": "Quản lý dự án với Agile",
-        "Logo": "PMAG.jpg"
+        "Logo": "agile.png"
     },
     {
         "Id": "VBPR",
         "Name": "Lập trình VB.NET",
-        "Logo": "VBPR.png"
+        "Logo": "vb.jpg"
     },
     {
         "Id": "WEBU",
         "Name": "Xây dựng trang web",
-        "Logo": "WEBU.jpg"
+        "Logo": "designWeb.png"
     }
 ]
