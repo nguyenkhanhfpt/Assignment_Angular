@@ -12,6 +12,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BoxCourseComponent } from './components/box-course/box-course.component';
 import { TestComponent } from './pages/test/test.component';
+import { ResultComponent } from './pages/result/result.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TestComponent } from './pages/test/test.component';
     MenuComponent,
     FooterComponent,
     BoxCourseComponent,
-    TestComponent
+    TestComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,

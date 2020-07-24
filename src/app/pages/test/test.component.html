@@ -1,27 +1,39 @@
-<h6>{{questions[questionIndex].Text}}</h6>
+<div *ngIf="!finish">
+    <p>Thoi gian con lai: {{ calculatorTime() }}</p>
 
-<div *ngFor="let question of questions[questionIndex].Answers">
-    <input type="radio" id="{{question.Id}}" name="{{questions[questionIndex].Id}}" 
-        value="{{question.Id}}" (change)="getAnswer(questions[questionIndex].AnswerId, question.Id)">
-    <label for="{{question.Id}}">{{question.Text}}</label>
+    <h6>{{questions[questionIndex].Text}}</h6>
+
+    <div *ngFor="let question of questions[questionIndex].Answers">
+        <input type="radio" id="{{question.Id}}" name="{{questions[questionIndex].Id}}" 
+            value="{{question.Id}}" (change)="getAnswer(questions[questionIndex].AnswerId, question.Id)">
+        <label for="{{question.Id}}">{{question.Text}}</label>
+    </div>
+    
+    <button (click)="previousQuestion()" 
+        class="btn btn-danger" 
+        [disabled]="questionIndex == 0">
+        Previous
+    </button>
+    <button (click)="nextQuestion()"
+        class="btn btn-primary ml-2" 
+        *ngIf="questionIndex < questions.length - 1">
+        Next
+    </button>
+    
+    <button
+        *ngIf="questionIndex > 0"
+        class="btn btn-warning ml-2"
+        (click)="finshTest()">
+        Finish
+    </button>
 </div>
 
-<button (click)="previousQuestion()" 
-    class="btn btn-danger" 
-    [disabled]="questionIndex == 0">
-    Previous
-</button>
-<button (click)="nextQuestion()"
-    class="btn btn-primary ml-2" 
-    *ngIf="questionIndex < questions.length - 1">
-    Next
-</button>
+<!-- If finsh test -->
+<div *ngIf="finish">
+    <app-result [data]="{id: id, mark: mark, time: time}"></app-result>
+</div>
 
-<button
-    *ngIf="questionIndex > 0"
-    class="btn btn-warning ml-2"
-    (click)="finshTest()">
-    Finish
-</button>
+
+
 
 

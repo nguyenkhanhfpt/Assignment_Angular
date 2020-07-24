@@ -11,26 +11,53 @@ export class TestComponent implements OnInit {
   id:string;
   questions:any = [];
   questionIndex:number = 0;
+  finish: boolean = false;
+  time: number= 125;
+  countTime: any;
 
   answers:any = {};
   answerId:number;
   answerChoice:number;
   mark:number;
 
-  constructor(private route: ActivatedRoute,
-      private httpClient: HttpClient) {
-        this.mark = 0;
+  constructor(
+      private route: ActivatedRoute,
+      private httpClient: HttpClient
+    ) 
+  {
+      this.mark = 0;
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
     this.id = this.route.snapshot.paramMap.get('id');
 
     this.httpClient.get(`assets/db/Quizs/${this.id}.js`).subscribe(data =>{
-      console.log(data);
-      this.questions = data;
-    })
+      this.questions = data;   // get all questions 
+    });
+
+    this.countTime = setInterval(() => {
+      if (this.time == 0) {
+        alert('Bài test của bạn đã kết thúc');
+        this.finshTest();
+        return;
+      }
+      this.time -= 1;
+    }, 1000);
   }
 
+  // tính thời gian bài test
+  calculatorTime() {
+    if (this.time <= 60) {
+      return `${this.time} giây`;
+    } else {
+      let minutes = Math.floor(this.time / 60);
+      let seconds = this.time % (minutes * 60); 
+      return `${minutes} phút ${seconds} giây`;
+    }
+  }
+
+  // đi tới câu hỏi tiếp theo
   nextQuestion() {
     this.questionIndex += 1;
 
@@ -38,10 +65,9 @@ export class TestComponent implements OnInit {
 
     this.answerId = 0;
     this.answerChoice = null;
-
-    console.log(this.answers);
   }
 
+  // quay lại câu hỏi trước
   previousQuestion() {
     if(this.questionIndex == 0) {
       return;
@@ -50,6 +76,7 @@ export class TestComponent implements OnInit {
     this.questionIndex -= 1;
   }
 
+  // Lấy thông tin câu trả lời
   getAnswer(answerId, choice) 
   {
       this.answerId = answerId;
@@ -57,6 +84,7 @@ export class TestComponent implements OnInit {
       console.log(`Cau tra loi la: ${answerId}, va ban chon: ${choice}`);
   }
 
+  // Hoàn thành bài test
   finshTest()
   {
     for(let answer in this.answers) {
@@ -65,6 +93,10 @@ export class TestComponent implements OnInit {
       }
     }
     console.log(`Tong diem cua ban la: ${this.mark}`);
+
+    clearInterval(this.countTime);
+
+    this.finish = true;
   }
 
 }
