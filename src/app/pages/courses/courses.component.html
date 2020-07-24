@@ -1,6 +1,19 @@
 <div class="wraper">
     <div class="contai">
 
+        <div class="p-3">
+
+        </div>
+
+        <div class="head-course">
+            <h1>Học lập trình,</h1>
+            <h2>làm bài test online để bổ sung kỹ năng mà bạn cần!</h2>
+
+            <div class="head-course__search">
+                <input (keyup)="searchTest($event)" type="text" placeholder="Nhập nội dung tìm kiếm">
+            </div>
+        </div>
+
         <div class="course pb-5">
             <div *ngFor="let course of courses">
                 <app-box-course [course]="course"></app-box-course>

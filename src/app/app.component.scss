@@ -68,7 +68,7 @@ img {
         }
 
         .card-img-top {
-            height: 220px;
+            height: 210px;
         }
 
         .card-title {
@@ -108,13 +108,13 @@ img {
     outline: none;
     border: 1.5px solid $title-color;
     border-radius: 5px;
-    padding: .3rem 1rem;
+    padding: .3rem .9rem;
 
     background-color: #fff;
     color: $title-color;
     
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1rem;
 
     transition: linear .2s;
 

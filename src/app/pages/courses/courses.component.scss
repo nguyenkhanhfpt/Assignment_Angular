@@ -1,1 +1,37 @@
 @import '../../app.component.scss';
+
+
+.head-course {
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+
+    background: url('../../../assets/images/logo.png') no-repeat;
+    background-position: bottom right;
+
+    font-family: 'Roboto', sans-serif;
+
+    h1 {
+        font-size: 1.9rem;
+        color: $title-color;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        color: $text-color;
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+
+    &__search {
+        input {
+            padding: .5rem .4rem;
+            width: 350px;
+            font-weight: 300;
+
+            color: rgb(171, 171, 171);
+            outline: none;
+            border: 1px solid #ccc;
+        }
+        
+    }
+}
