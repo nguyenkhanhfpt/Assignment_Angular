@@ -12,7 +12,7 @@ export class TestComponent implements OnInit {
   questions:any = [];
   questionIndex:number = 0;
   finish: boolean = false;
-  time: number= 125;
+  time: number= 65;
   countTime: any;
 
   answers:any = {};
@@ -44,6 +44,11 @@ export class TestComponent implements OnInit {
       }
       this.time -= 1;
     }, 1000);
+  }
+
+  ngOnDestroy(event): void
+  {
+      clearInterval(this.countTime);
   }
 
   // tính thời gian bài test
